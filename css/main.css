@@ -1,0 +1,67 @@
+html{
+    margin: 0;
+    padding: 0;
+    background: #efefef;
+}
+body{
+    width: 80%;
+    margin: 10px auto;
+}
+header, nav, section, article, footer{
+    margin: 5px 0;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Tahoma';
+    border-radius: 5px;
+    box-shadow: gray 2px 2px;
+}
+header{
+    background: #B7B9B8;
+}
+header ul{
+    list-style: none;
+}
+header ul li{
+    list-style: none;
+    display: inline-block; 
+    border: 1px solid #3e3e3e;
+    border-radius: 4px;
+}
+nav{
+    float: left;
+    width: 25%;
+    background: white;
+    color: gray;
+}
+nav ul{
+    list-style: none;
+}
+nav ul li{
+    margin: 5px 5px;
+    padding: 4px 10px;
+    margin-right: 40px;
+    border: 1px solid #3e3e3e;
+    border-radius: 4px;
+}
+section{
+    float: right;
+    width: 70%;
+    height: 450px;
+    background: white;
+}
+article{
+    margin: 10px auto;
+    background: #B7B9B8;
+    width: 90%;
+}
+.resumenSisdis,.resumenSisbac{
+    margin: 40px 40px;
+    text-align: justify;
+}
+.final{
+    clear: both;
+}
+footer{
+    background: #B7B9B8;
+}
