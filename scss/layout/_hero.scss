@@ -1,0 +1,20 @@
+.hero {
+    background: linear-gradient(to right top, rgba($big-stone, 0.1), rgba($glacier, 0.1)), url("/img/hero.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+
+    &__content {
+        &--title {
+            width: 100%;
+
+            &--subtitle {
+                width: 800px;
+                color: $colorBlanco;
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+*,
+*::after,
+*::before {
+   margin: 0;
+   padding: 0;
+   box-sizing: inherit;
+   background: $colorBlanco;
+}
+
+body {
+/*   box-sizing: border-box;
+   position: relative;
+*/
+   width: 80%;
+   margin: 10px auto;
+}
+header, nav, section, article, footer{
+   margin: 5px 0;
+   padding: 10px 0;
+   text-align: center;
+   font-size: 18px;
+   font-family: 'Tahoma';
+   box-shadow: gray 2px 2px;
+   border-radius: 5px;
+   background: $colorFondo;
+}
+ul {
+   list-style: none;
+}
+a {
+   text-decoration: none;
+}

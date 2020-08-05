@@ -1,0 +1,13 @@
+.btn {
+    display: inline-block;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 12px 20px;
+
+    &__red {
+        background: $scarlet;
+        color: $colorBlanco;
+    }
+}
+

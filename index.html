@@ -7,37 +7,36 @@
 </head>
 <body>
     <!-- inicio header -->
-    <header>
-        <ul>
-            <li>Inicio</li>
-            <li>Productos</li>
-            <li>Contacto</li>
-        </ul>
+    <header class="encabezado">
+        <a class="encabezado__item" href="#">Inicio</a>
+        <a class="encabezado__item" href="#">Productos</a>
+        <a class="encabezado__item" href="#">Contactos</a>
     </header>
     <!-- final header -->
  
     <!-- inicio nav -->
-    <nav>
-        <h4>Sistemas de Software Profesional SAS</h4>
-        <img src="img/logo_sspsas.png" alt=""  width="200" height="131">
-        <ul>
-            <li>Misión</li>
-            <li>Visión</li>
-            <li>Nostros</li>
-        </ul>
+    <nav class="navegador">
+        <h4 class="navegador__titulo">Sistemas de Software Profesional SAS</h4>
+        <img class="navegador__imagen" src="img/logo_sspsas.png" alt=""  width="200" height="131">
+        <a class="navegador__lista" href="#">Misión</a>
+        <a class="navegador__lista" href="#">Visión</a>
+        <a class="navegador__lista" href="#">Nosotros</a>
     </nav>
     <!-- fin nav -->
 
     <!-- inicio section -->
-    <section id="ResumenProductos">
-        <div>
-            <span>PRODUCTOS</span>
-            <article>SISDIS - Sistema de Distritos</article>
-            <div class="resumenSisdis">
+    <section class="seccion">
+        <span class="seccion__titulo">PRODUCTOS</span>
+        <div class="tarjeta">
+            <article class="tarjeta__titulo">SISDIS - Sistema de Distritos</article>
+            <div class="tarjeta__texto">
                 Tiene como objetivo fundamental integrar los procesos que los Distritos manejan con los predios y así mismo poder llevar un mejor control en cuanto a las solicitudes de riego, autorizaciones de boletas, solicitudes tanto de equipos como de obras al igual que su respectivo mantenimiento, facturaciones, documentos e informes de acuerdo a la necesidad del usuario.
-                </div>
-            <article>SISBAC - Sistema de Basculas</article>
-            <div class="resumenSisbac">
+            </div>
+        </div>
+        <div class="tarjeta">
+            <article class="tarjeta__titulo">SISBAC - Sistema de Basculas</article>
+            <div class="tarjeta__texto">
+                El objetivo fundamental de SISBAC es integrar los procesos que se realizan en la entrada y salida de los vehículos de carga y así mismo llevar un seguimiento por medio de informes que permitan visualizar y controlar los datos sobre el pesaje de cada uno de ellos.
                 El objetivo fundamental de SISBAC es integrar los procesos que se realizan en la entrada y salida de los vehículos de carga y así mismo llevar un seguimiento por medio de informes que permitan visualizar y controlar los datos sobre el pesaje de cada uno de ellos.
             </div>
         </div>
@@ -48,7 +47,7 @@
     <div class="final"></div>
  
     <!-- inicio footer -->
-    <footer>
+    <footer class="pie">
         Si deseas información acerca de Sistemas de Software Profesional S.A.S. o alguno de nuestros productos o servicios, contactenos Movil (311) 2579945 o al e-mail ventas@sspltda.com
     </footer>
     <!-- fin footer -->

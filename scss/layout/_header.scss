@@ -1,0 +1,70 @@
+.encabezado{
+    display: flex;
+    justify-content: center;
+    background: #B7B9B8;
+}
+.encabezado__item{
+    text-decoration: none;
+    color: gray;
+    border: 1px solid #3e3e3e;
+    border-radius: 4px;
+    padding: 6px 12px;
+    transition: background-color .15s ease-in-out;
+    width: 80px;
+    margin: 0px 10px;
+}
+.navegador{
+    float: left;
+    width: 25%;
+    color: gray;
+    background: $colorFondo;
+}
+.navegador__titulo{
+    background: $colorFondo;
+}
+.navegador__lista{
+    display: block;
+    text-decoration: none;
+    color: gray;
+    margin: 5px 5px;
+    padding: 6px 12px;
+    border: 1px solid #3e3e3e;
+    border-radius: 4px;
+}
+.navegador__imagen{
+    width: 80%;
+    height: auto;
+    margin: 10px;
+}
+.seccion{
+    float: right;
+    width: 70%;
+    height: auto;
+}
+.seccion__titulo{
+    background: $colorFondo;
+}
+.tarjeta{
+    padding: 5px;
+    margin: 10px;
+    border: 1px solid #3e3e3e;
+    border-radius: 4px;
+    background: $colorBlanco;
+}
+.tarjeta__titulo{
+    margin: 10px auto;
+    background: #B7B9B8;
+    width: 90%;
+}
+.tarjeta__texto{
+    margin: 10px auto;
+    text-align: justify;
+    width: 90%;
+    background: $colorBlanco;
+}
+.final{
+    clear: both;
+}
+.pie{
+    background: #B7B9B8;
+}

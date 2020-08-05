@@ -1,0 +1,39 @@
+// colors
+
+$colorFondo: #efefef;
+$jungle-mist: #b4ced9;
+$big-stone: #163840;
+$glacier: #6bb0bf;
+$scarlet: #f21905;
+$emperor: #515151;
+
+$colorBlanco: white;
+$color-black: #000;
+$color-gray: #999999;
+
+// breakpoints
+
+$bp-mobile: 300px;
+$bp-tablet: 768px;
+$bp-desktop: 1024px;
+$bp-huge: 1300px;
+
+$bps: (
+    "mobile": $bp-mobile,
+    "tablet": $bp-tablet,
+    "desktop": $bp-desktop,
+    "huge": $bp-huge,
+);
+
+//font size rem
+
+$base-font-size: 16px;
+
+
+// z index
+
+$z-back:-10;
+$z-normal:1;
+$z-tooltip :10;
+$z-fixed:100;
+$z-modal:1000;
