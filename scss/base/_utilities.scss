@@ -2,14 +2,14 @@
     padding-left: 20px;
     padding-right: 20px;
 
-    @include from (desktop) {
+    @include mayor (desktop) {
         padding-left: 10%;
         padding-right: 10%;
     }
 }
 
 .opacity {
-    background: rgba($color-black, .8);
+    background: rgba($colorNegro, .8);
     position: absolute;
     top: 0;
     left: 0;

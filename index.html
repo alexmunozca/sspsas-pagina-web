@@ -2,31 +2,53 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>ohmyroot | mi primera página</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistemas de Software Profesional SAS</title>
     <link rel="stylesheet" href="css/main.css" type="text/css">
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css"> -->
 </head>
 <body>
     <!-- inicio header -->
     <header class="encabezado">
-        <a class="encabezado__item" href="#">Inicio</a>
-        <a class="encabezado__item" href="#">Productos</a>
-        <a class="encabezado__item" href="#">Contactos</a>
+        <ul class="encabezado__lista">
+            <li class="encabezado__lista__item"><a class="encabezado__lista__link" href="#">Inicio</a></li>
+            <li class="encabezado__lista__item"><a class="encabezado__lista__link" href="#">Productos</a></li>
+            <li class="encabezado__lista__item"><a class="encabezado__lista__link" href="#">Contactos</a></li>
+        </ul>
+        <div class="encabezado__buscar">
+            <input class="encabezado__buscar__input" type="search" placeholder="Buscar..." />
+        </div>
+        <div class="menu">
+            <input class="menu__input" type="checkbox" id="menu">
+            <label class="menu__hamburguesa" for="menu">☰</label>
+            <ul class="menu__lista">
+                <li class="menu__lista__item"><a class="menu__lista__link" href="#">Inicio</a></li>
+                <li class="menu__lista__item"><a class="menu__lista__link" href="#">Productos</a></li>
+                <li class="menu__lista__item"><a class="menu__lista__link" href="#">Contactos</a></li>
+            </ul>
+            <div class="menu__buscar">
+                <input class="menu__buscar__input" type="search" placeholder="Buscar..." />
+            </div>
+        </div>  
     </header>
+
     <!-- final header -->
  
     <!-- inicio nav -->
     <nav class="navegador">
         <h4 class="navegador__titulo">Sistemas de Software Profesional SAS</h4>
-        <img class="navegador__imagen" src="img/logo_sspsas.png" alt=""  width="200" height="131">
-        <a class="navegador__lista" href="#">Misión</a>
-        <a class="navegador__lista" href="#">Visión</a>
-        <a class="navegador__lista" href="#">Nosotros</a>
+        <img class="navegador__imagen" src="img/logo_sspsas.png">
+        <ul class="navegador__lista">
+            <li class="navegador__lista__item"><a class="navegador__lista__link" href="#">Misión</a></li>
+            <li class="navegador__lista__item"><a class="navegador__lista__link" href="#">Visión</a></li>
+            <li class="navegador__lista__item"><a class="navegador__lista__link" href="#">Nosotros</a></li>
+        </ul>
     </nav>
     <!-- fin nav -->
 
     <!-- inicio section -->
     <section class="seccion">
-        <span class="seccion__titulo">PRODUCTOS</span>
+        <p class="seccion__titulo">PRODUCTOS</p>
         <div class="tarjeta">
             <article class="tarjeta__titulo">SISDIS - Sistema de Distritos</article>
             <div class="tarjeta__texto">
@@ -36,13 +58,42 @@
         <div class="tarjeta">
             <article class="tarjeta__titulo">SISBAC - Sistema de Basculas</article>
             <div class="tarjeta__texto">
-                El objetivo fundamental de SISBAC es integrar los procesos que se realizan en la entrada y salida de los vehículos de carga y así mismo llevar un seguimiento por medio de informes que permitan visualizar y controlar los datos sobre el pesaje de cada uno de ellos.
+                <img class="tarjeta__imagen" src="img/sisbac.jpg" alt="Sistema de Basculas">
                 El objetivo fundamental de SISBAC es integrar los procesos que se realizan en la entrada y salida de los vehículos de carga y así mismo llevar un seguimiento por medio de informes que permitan visualizar y controlar los datos sobre el pesaje de cada uno de ellos.
             </div>
         </div>
     </section>
     <!-- fin section-->
+
     <!-- inicio aside -->
+    <aside class="referencia">
+        <p class="referencia__titulo">Referencias</p>
+        <ul class="referencia__lista">
+            <li class="referencia__lista__item"><a class="referencia__lista__link" href="#">Clientes</a></li>
+            <li class="referencia__lista__item"><a class="referencia__lista__link" href="#">Proveedores</a></li>
+            <li class="referencia__lista__item"><a class="referencia__lista__link" href="#">Contratista</a></li>
+        </ul>
+    </aside>
+<!-- fin aside -->
+
+    <!-- inicio aside -->
+    <aside class="servicios">
+        <p class="servicios__titulo">Servicios</p>
+        <p class="servicios__lista">
+          <span class="servicios__item-1">Salud</span>
+          <span class="servicios__item-2">Distritos</span>
+          <span class="servicios__item-3">Basculas</span>
+          <span class="servicios__item-4">Alquiler</span>
+          <span class="servicios__item-5">Dominios</span>
+          <span class="servicios__item-6">Hosting</span>
+          <span class="servicios__item-7">Desarrollo</span>
+          <span class="servicios__item-8">Visual</span>
+          <span class="servicios__item-9">JavaScript</span>
+          <span class="servicios__item-10">Html</span>
+          <span class="servicios__item-11">Css</span>
+        </p>
+    </aside>
+<!-- fin aside -->
  
     <div class="final"></div>
  
@@ -51,5 +102,6 @@
         Si deseas información acerca de Sistemas de Software Profesional S.A.S. o alguno de nuestros productos o servicios, contactenos Movil (311) 2579945 o al e-mail ventas@sspltda.com
     </footer>
     <!-- fin footer -->
+    <!-- <script src="js/index.js"></script> -->
 </body>
 </html>

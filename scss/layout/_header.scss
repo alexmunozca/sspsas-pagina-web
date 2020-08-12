@@ -1,70 +1,276 @@
-.encabezado{
-    display: flex;
-    justify-content: center;
-    background: #B7B9B8;
+.encabezado {
+    background: $colorTitulo;
+    overflow: hidden;
+    &__lista {
+        @include mayor(tablet) {
+            display: none;
+        }
+        &__item {
+            &:first-child {
+                margin: 0px 5px 0px 10px;
+            }
+            display: block;
+            float: left;
+            width: 80px;
+            padding: 5px 10px;
+            margin: 0px 5px;
+            border: 1px solid $colorBorde;
+            border-radius: 4px;
+            transition: background-color .15s ease-in-out;
+        }
+        &__link {
+            color: $colorGris;
+        }
+    }
+    &__buscar {
+        @include mayor(tablet) {
+            display: none;
+        }
+        float: right;
+        width: 250px;
+        margin: 0px 10px;
+        border: 1px solid $colorBorde;
+        border-radius: 4px;
+        &__input {
+            @include font-size(18px);
+            border: 0;
+            padding: 5px 10px;
+            margin: 0px 5px;
+            &:hover {
+                outline: none;
+                background: $colorBlanco;
+            }
+            &:focus {
+                outline: none;
+                background: $colorBlanco;
+            }
+            &:active {
+                outline: none;
+                background: $colorBlanco;
+            }
+        }
+    }
 }
-.encabezado__item{
-    text-decoration: none;
-    color: gray;
-    border: 1px solid #3e3e3e;
-    border-radius: 4px;
-    padding: 6px 12px;
-    transition: background-color .15s ease-in-out;
-    width: 80px;
+.menu {
+    @include menor(tablet) {
+        display: none;
+    }
+   background: $colorTitulo;
+}
+.menu__hamburguesa {
+    @include menor(tablet) {
+        display: none;
+    }
+    box-sizing: border-box;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    text-align: center;
+    user-select: none;
+    margin: 5px 5px;
+    &:hover {
+        background: $colorFondo;
+    }
+}
+.menu__input {
+    display: none;
+}
+.menu__lista {
+    display: none;
+}
+.menu__input:checked ~ .menu__lista {
+    display: block;
+}
+.menu__input:checked ~ .menu__buscar {
+    display: inline-block;
+}
+.menu__input:checked ~ .menu__hamburguesa {
+    background: $colorFondo;
+}
+.menu__lista__item {
+    display: block;
+    background: $colorTitulo;
+    padding: 5px 10px;
+    list-style: none;
+    border-bottom: 1px solid grey;
+    &:hover {
+        filter: brightness(125%);
+    }
+}
+.menu__lista__link {
+    background: $colorTitulo;
+    color: $colorGris;
+}
+.menu__buscar {
+    @include mayor(tablet) {
+        display: none;
+    }
+    background: $colorFondo;
+    width: 250px;
     margin: 0px 10px;
+    border: 1px solid $colorBorde;
+    border-radius: 4px;
+    &__input {
+        @include font-size(18px);
+        border: 0;
+        background: $colorFondo;
+        padding: 5px 10px;
+        margin: 0px 5px;
+        &:hover {
+            outline: none;
+            background: $colorFondo;
+        }
+        &:focus {
+            outline: none;
+            background: $colorFondo;
+        }
+        &:active {
+            outline: none;
+            background: $colorFondo;
+        }
+    }
 }
-.navegador{
+.navegador {
     float: left;
     width: 25%;
-    color: gray;
-    background: $colorFondo;
+    &__titulo {
+        @include mayor(tablet) {
+            display: none;
+        }
+        background: $colorBlanco;
+    }
+    &__imagen {
+        width: 80%;
+        height: auto;
+        margin: 10px;
+    }
+    &__lista__item {
+        display: block;
+        padding: 3px 12px;
+        background: $colorBlanco;
+        transition: background-color .15s ease-in-out;
+    }
+    &__lista__link {
+        color: $colorGris;
+        background: $colorBlanco;
+    }
 }
-.navegador__titulo{
-    background: $colorFondo;
+.servicios {
+    float: left;
+    width: 25%;
+    &__titulo {
+        text-align: left;
+        margin: 0px 0px 10px 10px;
+        background: $colorBlanco;
+    }
+    &__lista {
+        @include font-size(12px);
+        text-align: left;
+        margin: 0px 0px 0px 10px;
+        background: $colorBlanco;
+    }
+    &__item-1{
+        filter: brightness(100%);
+    }
+    &__item-2{
+        filter: brightness(120%);
+    }
+    &__item-3{
+        filter: brightness(140%);
+    }
+    &__item-4{
+        filter: brightness(160%);
+    }
+    &__item-5{
+        filter: brightness(180%);
+    }
+    &__item-6{
+        filter: brightness(115%);
+    }
+    &__item-7{
+        filter: brightness(135%);
+    }
+    &__item-8{
+        filter: brightness(155%);
+    }
+    &__item-9{
+        filter: brightness(175%);
+    }
+    &__item-10{
+        filter: brightness(75%);
+    }
+    &__item-11{
+        filter: brightness(100%);
+    }
 }
-.navegador__lista{
-    display: block;
-    text-decoration: none;
-    color: gray;
-    margin: 5px 5px;
-    padding: 6px 12px;
-    border: 1px solid #3e3e3e;
-    border-radius: 4px;
+
+.referencia {
+    float: left;
+    width: 25%;
+    background: $colorTarjeta;
+    &__titulo {
+        @include font-size(18px);
+        text-align: left;
+        margin: 0px 0px 10px 10px;
+        background: $colorTarjeta;
+    }
+    &__lista {
+        @include font-size(16px);
+        text-align: left;
+        margin: 0px 0px 0px 10px;
+        background: $colorTarjeta;
+        &__item {
+            background: $colorTarjeta;
+        }
+        &__link {
+            color: $colorBlanco;
+            background: $colorTarjeta;
+        }
+    }
 }
-.navegador__imagen{
-    width: 80%;
-    height: auto;
-    margin: 10px;
-}
-.seccion{
+.seccion {
     float: right;
     width: 70%;
     height: auto;
 }
-.seccion__titulo{
-    background: $colorFondo;
+.seccion__titulo {
+    background: $colorBlanco;
+    color: $colorNegro;
 }
-.tarjeta{
+.tarjeta {
+    overflow: hidden;
     padding: 5px;
     margin: 10px;
-    border: 1px solid #3e3e3e;
+    border: 1px solid $colorBorde;
     border-radius: 4px;
     background: $colorBlanco;
 }
-.tarjeta__titulo{
+.tarjeta__titulo {
     margin: 10px auto;
-    background: #B7B9B8;
+    background: $colorTitulo;
+    color: white;
     width: 90%;
 }
-.tarjeta__texto{
+.tarjeta__imagen {
+    float: left;
+    width: 40%;
+    height: auto;
+    margin: 5px 10px 0px 5px;
+}
+.tarjeta__texto {
+    @include font-size(18px);
     margin: 10px auto;
     text-align: justify;
     width: 90%;
     background: $colorBlanco;
 }
-.final{
+.final {
     clear: both;
 }
-.pie{
-    background: #B7B9B8;
+.pie {
+    background: $colorTitulo;
 }
