@@ -1,12 +1,54 @@
-// selector
-var menu = document.querySelector('.encabezado__menu__hamburguesa');
+var botonInicio = document.getElementById('encabezadoInicio');
+var botonSisbac = document.getElementById('botonSisbac');
+var botonSismep = document.getElementById('botonSismep');
 
-// method
-function toggleMenu (event) {
-//  this.classList.toggle('is-active');
-  document.querySelector( ".encabezado__lista" ).classList.toggle("is_active");
+function encabezadoInicio() {  
+  location.reload()  
+}
+function cargarSisbac (event) {
+  document.getElementById('tarjetaSisdis').style.display = 'none';
+  document.getElementById('tarjetaSisbac').style.display = 'none';
+  document.getElementById('tarjetaSismep').style.display = 'none';
+
+  var link = "./sisbac/sisbac.html" 
+  var iframe = document.createElement('iframe'); 
+  var ancho = document.querySelector(".principal").width
+  iframe.frameBorder=0; 
+  iframe.width="97.5%"; 
+  iframe.height="2900"; 
+  iframe.id="iframeSisbac"; 
+  iframe.className="iframeSisbac" 
+  iframe.setAttribute("src", link); 
+  document.getElementById("iframejs").appendChild(iframe);
   event.preventDefault();
 }
 
-// event
-menu.addEventListener('click', toggleMenu, false);
+function cargarSismep (event) {
+  document.getElementById('tarjetaSisdis').style.display = 'none';
+  document.getElementById('tarjetaSisbac').style.display = 'none';
+  document.getElementById('tarjetaSismep').style.display = 'none';
+  // document.querySelector(".principal__titulo").style.display = 'none';
+
+  var link = "./sismep/sismep.html" 
+  var iframe = document.createElement('iframe'); 
+  var ancho = document.querySelector(".principal").width
+//  iframe.style.position = "absolute";
+  // iframe.style.top ="0";
+  // iframe.style.left     = "0";
+  // iframe.width          = "100%";
+  // iframe.height         = "100%";  
+  iframe.frameBorder=0; 
+  iframe.width="97.5%"; 
+  iframe.height="2250"; 
+  iframe.id="iframeSismep"; 
+  iframe.className="iframeSismep" 
+  iframe.setAttribute("src", link); 
+// iframe.onload="javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+'px';}(this));" 
+//  iframe.style="height:2600;width:100%;border:none;overflow:hidden;" otra forma de dar stylo
+  document.getElementById("iframejs").appendChild(iframe);
+  event.preventDefault();
+}
+
+botonInicio.addEventListener("click", encabezadoInicio, false);
+botonSismep.addEventListener("click", cargarSismep, false);
+botonSisbac.addEventListener("click", cargarSisbac, false);

@@ -6,23 +6,22 @@
    box-sizing: inherit;
    background: $colorFondo;
 }
-
-body {
+.contenedor {
    width: 80%;
    margin: 10px auto;
 }
-header, nav, section, article, footer, aside{
+header, main, nav, section, article, footer, aside{
    margin: 5px 0;
    padding: 10px 0;
    text-align: center;
    font-size: 18px;
    font-family: 'Tahoma';
-   box-shadow: gray 2px 2px 2px 2px;
+   box-shadow: gray 1px 1px 1px 1px;
    border-radius: 5px;
    background: $colorBlanco;
 }
-ul {
-   list-style: none;
+ ul {
+    list-style: none;
 }
 a {
    text-decoration: none;
@@ -32,3 +31,11 @@ span {
    color: $colorBlanco;
    background: $colorTitulo;
 }
+// iframe { 
+//    margin:0; 
+//    padding:0; 
+//    height:100%;
+//    display:block; 
+//    width:100%; 
+//    border:none; 
+// }
