@@ -1,4 +1,53 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&display=swap");
+.galeria {
+  min-width: 90px;
+  float: left;
+  width: 20%;
+  background: #7D97A5;
+}
+
+.galeria__item {
+  vertical-align: middle;
+}
+
+.galeria__texto {
+  background: #7D97A5;
+  color: #FFFFFF;
+  font-size: 15px;
+  padding: 8px 0px;
+  text-align: center;
+}
+
+.galeria--active {
+  background: #7D97A5;
+}
+
+.galeria--animacion {
+  background: #7D97A5;
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 *,
 *::after,
 *::before {
@@ -144,6 +193,7 @@ body, span {
 }
 
 .encabezado {
+  min-width: 365px;
   background: #4D636F;
   overflow: hidden;
 }
@@ -323,6 +373,7 @@ body, span {
 }
 
 .navegador {
+  min-width: 90px;
   float: left;
   width: 20%;
 }
@@ -358,6 +409,7 @@ body, span {
 }
 
 .referencia {
+  min-width: 90px;
   float: left;
   width: 20%;
   background: #7D97A5;
@@ -391,6 +443,7 @@ body, span {
 }
 
 .servicios {
+  min-width: 90px;
   float: left;
   width: 20%;
 }
@@ -466,6 +519,7 @@ body, span {
 }
 
 .principal {
+  min-width: 275px;
   float: right;
   width: 75%;
   height: auto;
@@ -503,8 +557,8 @@ body, span {
 }
 
 .tarjeta__texto {
-  font-size: 18px;
-  font-size: 1rem;
+  font-size: 17px;
+  font-size: 0.94444rem;
   margin: 10px auto;
   text-align: justify;
   width: 95%;
@@ -543,19 +597,8 @@ body, span {
   background: #4D636F;
 }
 
-.imagen--borde {
-  border: 2px solid #3e3e3e;
-  border-radius: 4px;
-}
-
 .iframe1 {
   background: #FFFFFF;
-}
-
-@media only screen and (max-width: 576px) {
-  .iframe1 {
-    height: 4130;
-  }
 }
 
 .producto {
@@ -605,4 +648,32 @@ body, span {
   margin: 0px 10px;
   list-style-type: circle;
   list-style-position: inside;
+}
+
+.imagen--borde {
+  border: 2px solid #3e3e3e;
+  border-radius: 4px;
+}
+
+.imagen--derecha {
+  float: right;
+}
+
+.texto--centrado {
+  text-align: center;
+}
+
+.texto--columna {
+  -webkit-column-count: 1;
+          column-count: 1;
+}
+
+.texto--columnas {
+  -webkit-column-count: 2;
+          column-count: 2;
+}
+
+.imagen--sobrepuesta {
+  margin: 5px;
+  float: left;
 }

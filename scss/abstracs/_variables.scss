@@ -1,9 +1,5 @@
 // colors
-
-//$colorFondo: #efefef;
-//$colorFondo: #F5F7F8;
 $colorFondo: #f6f8f8;
-//$colorTitulo: #B7B9B8;
 $colorTitulo: #4D636F;
 $colorBoton: #3a4b53;
 $colorGris: #808080;
@@ -16,7 +12,6 @@ $colorNegro: #000;
 $color-gray: #999999;
 
 // breakpoints
-
 $bp-mobile: 576px;
 $bp-tablet: 768px;
 $bp-desktop: 992px;
@@ -30,12 +25,9 @@ $bps: (
 );
 
 //font size rem
-
 $base-font-size: 18px;
 
-
 // z index
-
 $z-back:-10;
 $z-normal:1;
 $z-tooltip :10;

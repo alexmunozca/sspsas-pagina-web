@@ -1,5 +1,4 @@
 //font size rem
-
 @mixin font-size($size) {
     @if unitless($size) {
         $size: $size * 1px;
@@ -9,7 +8,6 @@
 }
 
 // breakpoints
-
 @mixin mayor($media) {
   $max-width-bp: (map-get($bps, $media) or $media);
 

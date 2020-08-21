@@ -1,6 +1,7 @@
 var botonInicio = document.getElementById('encabezadoInicio');
 var botonSisbac = document.getElementById('botonSisbac');
 var botonSismep = document.getElementById('botonSismep');
+var botonHosting = document.getElementById('botonHosting');
 
 function encabezadoInicio() {  
   location.reload()  
@@ -15,7 +16,7 @@ function cargarSisbac (event) {
   var ancho = document.querySelector(".principal").width
   iframe.frameBorder=0; 
   iframe.width="97.5%"; 
-  iframe.height="2900"; 
+  iframe.height="3060"; 
   iframe.id="iframeSisbac"; 
   iframe.className="iframeSisbac" 
   iframe.setAttribute("src", link); 
@@ -48,7 +49,26 @@ function cargarSismep (event) {
   document.getElementById("iframejs").appendChild(iframe);
   event.preventDefault();
 }
+function cargarHosting (event) {
+  document.getElementById('tarjetaSisdis').style.display = 'none';
+  document.getElementById('tarjetaSisbac').style.display = 'none';
+  document.getElementById('tarjetaSismep').style.display = 'none';
+  document.getElementById('tarjetaHosting').style.display = 'none';
+
+  var link = "./hosting/hosting.html" 
+  var iframe = document.createElement('iframe'); 
+  var ancho = document.querySelector(".principal").width
+  iframe.frameBorder=0; 
+  iframe.width="97.5%"; 
+  iframe.height="1700"; 
+  iframe.id="iframeHosting"; 
+  iframe.className="iframeHosting" 
+  iframe.setAttribute("src", link); 
+  document.getElementById("iframejs").appendChild(iframe);
+  event.preventDefault();
+}
 
 botonInicio.addEventListener("click", encabezadoInicio, false);
 botonSismep.addEventListener("click", cargarSismep, false);
 botonSisbac.addEventListener("click", cargarSisbac, false);
+botonHosting.addEventListener("click", cargarHosting, false);
