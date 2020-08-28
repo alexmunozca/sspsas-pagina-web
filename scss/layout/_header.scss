@@ -1,5 +1,4 @@
 .encabezado {
-    min-width: 365px;
     background: $colorTitulo;
     overflow: hidden;
     &__lista {
@@ -18,6 +17,9 @@
             border: 1px solid $colorBorde;
             border-radius: 4px;
             transition: background-color .15s ease-in-out;
+            &:hover {
+                filter: brightness(85%);
+            }
         }
         &__link {
             color: $colorBoton;
@@ -150,13 +152,20 @@
     }
     &__lista__item {
         display: block;
-        padding: 3px 12px;
+        padding: 0px 12px;
         background: $colorBlanco;
         transition: background-color .15s ease-in-out;
     }
     &__lista__link {
+        @include font-size(16px);
         color: $colorBoton;
         background: $colorBlanco;
+        &:hover {
+//            padding: 5px;
+            border: 1px solid $colorBorde;
+            border-radius: 4px;
+            background: $colorTarjeta;
+        }
     }
 }
 .referencia {
@@ -236,8 +245,10 @@
         filter: brightness(100%);
     }
 }
+.iframejs {
+    background: $colorBlanco;
+}
 .principal {
-    min-width: 275px;
     float: right;
     width: 75%;
     height: auto;
@@ -298,23 +309,20 @@
         background: $colorTitulo;
     }
 }
-.iframe1 {
-    background: $colorBlanco;
-}
-.producto {
+.brochure {
     background: $colorFondo;
     margin: 1px;
-    &__titulo {
+    &__encabezado {
         margin: 10px auto;
         background: $colorTarjeta;
         color: white;
         width: 95%;
     }
-}
-.brochure {
-    column-count: 2;
-    @include mayor(mobile) {
-        column-count: 1;
+    &__seccion {
+        column-count: 2;
+        @include mayor(mobile) {
+            column-count: 1;
+        }
     }
     &__titulo {
         color: $colorBoton;
@@ -329,13 +337,30 @@
     &__lista {
         text-align: left;
         &__item {
-            @include font-size(16px);
+            @include font-size(18px);
             margin: 0px 10px;
             list-style-type: circle;
             list-style-position: inside;
         }
     }
+    &__imagen {
+        cursor: pointer;
+    }
+    &__input {
+        padding: 0px 0px;
+        @include font-size(14px);
+        padding: 5px;
+        width: 100px;
+        border: 1px solid $colorBorde;
+        border-radius: 4px;
+        background: $colorTitulo;
+        color: $colorBlanco;
+        &:hover {
+            filter: brightness(125%);
+        }
+    }
 }
+
 .imagen--borde {
     border: 2px solid $colorBorde;
     border-radius: 4px;
@@ -355,4 +380,80 @@
 .imagen--sobrepuesta {
     margin: 5px;
     float: left;
+}
+
+
+
+.brochure__modal {
+    display: none; /* Hidden by default */
+    position: absolute; /* Stay in place - fixed*/
+    z-index: 1; /* Sit on top */
+    padding-top: 50px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: $colorTarjeta;
+    background-color: rgba($colorTarjeta,0.9);
+    border-radius: 5px;
+    &__imagen {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        border-radius: 10px;
+    }
+    &__texto {
+        margin: 0px auto 50px auto;
+        width: 80%;
+        @include mayor(mobile) {
+            margin: 0px 0px 30px 0px;
+            width: 100%;
+        }
+        display: block;
+        max-width: 700px;
+        text-align: center;
+        background: $colorTitulo;
+        color: $colorBlanco;
+        padding: 10px 0;
+        height: 20px;
+        border-radius: 10px;
+    }
+    &__imagen, &__texto {  
+        -webkit-animation-name: zoom;
+        -webkit-animation-duration: 0.6s;
+        animation-name: zoom;
+        animation-duration: 0.6s;
+    }
+    &__close {
+        background: $colorTitulo;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        color: $colorBlanco;
+        font-size: 30px;
+        font-weight: bold;
+        transition: 0.3s;
+        &:hover,
+        &:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+}
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .brochure__modal__imagen {
+        width: 100%;
+    }
 }

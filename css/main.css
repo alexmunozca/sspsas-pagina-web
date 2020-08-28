@@ -63,6 +63,13 @@
   margin: 10px auto;
 }
 
+@media only screen and (max-width: 768px) {
+  .contenedor {
+    width: 100%;
+    margin: 0px auto;
+  }
+}
+
 header, main, nav, section, article, footer, aside {
   margin: 5px 0;
   padding: 10px 0;
@@ -193,7 +200,6 @@ body, span {
 }
 
 .encabezado {
-  min-width: 365px;
   background: #4D636F;
   overflow: hidden;
 }
@@ -218,6 +224,11 @@ body, span {
 
 .encabezado__lista__item:first-child {
   margin: 0px 5px 0px 10px;
+}
+
+.encabezado__lista__item:hover {
+  -webkit-filter: brightness(85%);
+          filter: brightness(85%);
 }
 
 .encabezado__lista__link {
@@ -397,15 +408,23 @@ body, span {
 
 .navegador__lista__item {
   display: block;
-  padding: 3px 12px;
+  padding: 0px 12px;
   background: #FFFFFF;
   -webkit-transition: background-color .15s ease-in-out;
   transition: background-color .15s ease-in-out;
 }
 
 .navegador__lista__link {
+  font-size: 16px;
+  font-size: 0.88889rem;
   color: #3a4b53;
   background: #FFFFFF;
+}
+
+.navegador__lista__link:hover {
+  border: 1px solid #3e3e3e;
+  border-radius: 4px;
+  background: #7D97A5;
 }
 
 .referencia {
@@ -518,8 +537,11 @@ body, span {
           filter: brightness(100%);
 }
 
+.iframejs {
+  background: #FFFFFF;
+}
+
 .principal {
-  min-width: 275px;
   float: right;
   width: 75%;
   height: auto;
@@ -597,29 +619,25 @@ body, span {
   background: #4D636F;
 }
 
-.iframe1 {
-  background: #FFFFFF;
-}
-
-.producto {
+.brochure {
   background: #f6f8f8;
   margin: 1px;
 }
 
-.producto__titulo {
+.brochure__encabezado {
   margin: 10px auto;
   background: #7D97A5;
   color: white;
   width: 95%;
 }
 
-.brochure {
+.brochure__seccion {
   -webkit-column-count: 2;
           column-count: 2;
 }
 
 @media only screen and (max-width: 576px) {
-  .brochure {
+  .brochure__seccion {
     -webkit-column-count: 1;
             column-count: 1;
   }
@@ -643,11 +661,32 @@ body, span {
 }
 
 .brochure__lista__item {
-  font-size: 16px;
-  font-size: 0.88889rem;
+  font-size: 18px;
+  font-size: 1rem;
   margin: 0px 10px;
   list-style-type: circle;
   list-style-position: inside;
+}
+
+.brochure__imagen {
+  cursor: pointer;
+}
+
+.brochure__input {
+  padding: 0px 0px;
+  font-size: 14px;
+  font-size: 0.77778rem;
+  padding: 5px;
+  width: 100px;
+  border: 1px solid #3e3e3e;
+  border-radius: 4px;
+  background: #4D636F;
+  color: #FFFFFF;
+}
+
+.brochure__input:hover {
+  -webkit-filter: brightness(125%);
+          filter: brightness(125%);
 }
 
 .imagen--borde {
@@ -676,4 +715,104 @@ body, span {
 .imagen--sobrepuesta {
   margin: 5px;
   float: left;
+}
+
+.brochure__modal {
+  display: none;
+  /* Hidden by default */
+  position: absolute;
+  /* Stay in place - fixed*/
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 50px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: #7D97A5;
+  background-color: rgba(125, 151, 165, 0.9);
+  border-radius: 5px;
+}
+
+.brochure__modal__imagen {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  border-radius: 10px;
+}
+
+.brochure__modal__texto {
+  margin: 0px auto 50px auto;
+  width: 80%;
+  display: block;
+  max-width: 700px;
+  text-align: center;
+  background: #4D636F;
+  color: #FFFFFF;
+  padding: 10px 0;
+  height: 20px;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 576px) {
+  .brochure__modal__texto {
+    margin: 0px 0px 30px 0px;
+    width: 100%;
+  }
+}
+
+.brochure__modal__imagen, .brochure__modal__texto {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+.brochure__modal__close {
+  background: #4D636F;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #FFFFFF;
+  font-size: 30px;
+  font-weight: bold;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.brochure__modal__close:hover, .brochure__modal__close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+  .brochure__modal__imagen {
+    width: 100%;
+  }
 }

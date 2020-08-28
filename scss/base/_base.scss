@@ -9,6 +9,10 @@
 .contenedor {
    width: 80%;
    margin: 10px auto;
+   @include mayor(tablet) {
+      width: 100%;
+      margin: 0px auto;
+     }
 }
 header, main, nav, section, article, footer, aside{
    margin: 5px 0;
