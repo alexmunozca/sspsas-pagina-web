@@ -11,7 +11,6 @@ for (var i=0; i<img.length; i++){
       debugger;
       modal.style.display = "block";
       modal.style.top = this.offsetTop+'px';
-      // modal.style.color = "green";
       modalImagen.src = this.src;
       modalTexto.innerHTML = this.alt;
    }

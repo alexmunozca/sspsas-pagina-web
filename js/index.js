@@ -14,7 +14,7 @@ function menuInicio() {
   location.reload()  
 }
 function cargarSisdis (event) {
-  mostrarProductos("./sisdis/sisdis.html", "3060", "iframeSisdis")
+  mostrarProductos("./sisdis/sisdis.html", "3650", "iframeSisdis")
 }
 function cargarSisbac (event) {
   mostrarProductos("./sisbac/sisbac.html", "3150", "iframeSisbac")

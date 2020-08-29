@@ -135,7 +135,7 @@
     }
 }
 .navegador {
-    min-width: 90px;
+    min-width: 95px;
     float: left;
     width: 20%;
     &__titulo {
@@ -153,6 +153,10 @@
     &__lista__item {
         display: block;
         padding: 0px 12px;
+        @include mayor(mobile) {
+            text-align: left;
+            padding: 0px 5px;
+        }
         background: $colorBlanco;
         transition: background-color .15s ease-in-out;
     }
@@ -161,7 +165,6 @@
         color: $colorBoton;
         background: $colorBlanco;
         &:hover {
-//            padding: 5px;
             border: 1px solid $colorBorde;
             border-radius: 4px;
             background: $colorTarjeta;
@@ -169,7 +172,7 @@
     }
 }
 .referencia {
-    min-width: 90px;
+    min-width: 95px;
     float: left;
     width: 20%;
     background: $colorTarjeta;
@@ -196,7 +199,7 @@
     }
 }
 .servicios {
-    min-width: 90px;
+    min-width: 95px;
     float: left;
     width: 20%;
     &__titulo {
@@ -359,90 +362,73 @@
             filter: brightness(125%);
         }
     }
-}
-
-.imagen--borde {
-    border: 2px solid $colorBorde;
-    border-radius: 4px;
-}
-.imagen--derecha {
-    float: right;
-}
-.texto--centrado{
-    text-align: center;
-}
-.texto--columna {
-    column-count: 1;
-}
-.texto--columnas {
-    column-count: 2;
-}
-.imagen--sobrepuesta {
-    margin: 5px;
-    float: left;
-}
-
-
-
-.brochure__modal {
-    display: none; /* Hidden by default */
-    position: absolute; /* Stay in place - fixed*/
-    z-index: 1; /* Sit on top */
-    padding-top: 50px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: auto;
-    overflow: auto; /* Enable scroll if needed */
-    background-color: $colorTarjeta;
-    background-color: rgba($colorTarjeta,0.9);
-    border-radius: 5px;
-    &__imagen {
-        margin: auto;
-        display: block;
-        width: 80%;
-        max-width: 700px;
-        border-radius: 10px;
-    }
-    &__texto {
-        margin: 0px auto 50px auto;
-        width: 80%;
-        @include mayor(mobile) {
-            margin: 0px 0px 30px 0px;
-            width: 100%;
+    &__modal {
+        display: none; /* Hidden by default */
+        position: absolute; /* Stay in place - fixed*/
+        z-index: 1; /* Sit on top */
+        padding-top: 50px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: auto;
+        overflow: auto; /* Enable scroll if needed */
+        background-color: $colorTarjeta;
+        background-color: rgba($colorTarjeta,0.9);
+        border-radius: 5px;
+        &__imagen {
+            margin: auto;
+            display: block;
+            width: 95%;
+            max-width: 700px;
+            border-radius: 10px;
         }
-        display: block;
-        max-width: 700px;
-        text-align: center;
-        background: $colorTitulo;
-        color: $colorBlanco;
-        padding: 10px 0;
-        height: 20px;
-        border-radius: 10px;
-    }
-    &__imagen, &__texto {  
-        -webkit-animation-name: zoom;
-        -webkit-animation-duration: 0.6s;
-        animation-name: zoom;
-        animation-duration: 0.6s;
-    }
-    &__close {
-        background: $colorTitulo;
-        position: absolute;
-        top: 10px;
-        right: 20px;
-        color: $colorBlanco;
-        font-size: 30px;
-        font-weight: bold;
-        transition: 0.3s;
-        &:hover,
-        &:focus {
-            color: #bbb;
-            text-decoration: none;
-            cursor: pointer;
+        &__texto {
+            margin: 0px auto 50px auto;
+            width: 80%;
+            @include mayor(mobile) {
+                margin: 0px 0px 30px 0px;
+                width: 100%;
+            }
+            display: block;
+            max-width: 700px;
+            text-align: center;
+            background: $colorTitulo;
+            color: $colorBlanco;
+            padding: 10px 0;
+            height: 20px;
+            border-radius: 10px;
+        }
+        &__imagen, &__texto {  
+            -webkit-animation-name: zoom;
+            -webkit-animation-duration: 0.6s;
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+        &__close {
+            background: $colorTitulo;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            color: $colorBlanco;
+            font-size: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+            &:hover,
+            &:focus {
+                color: #bbb;
+                text-decoration: none;
+                cursor: pointer;
+            }
         }
     }
 }
+.imagen--borde {border: 2px solid $colorBorde; border-radius: 4px;}
+.imagen--derecha {float: right;}
+.texto--centrado{text-align: center;}
+.texto--columna {column-count: 1;}
+.texto--columnas {column-count: 2;}
+.imagen--sobrepuesta {margin: 5px; float: left;}
+
 @-webkit-keyframes zoom {
     from {-webkit-transform:scale(0)} 
     to {-webkit-transform:scale(1)}
@@ -451,9 +437,42 @@
     from {transform:scale(0)} 
     to {transform:scale(1)}
 }
-/* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px){
     .brochure__modal__imagen {
         width: 100%;
     }
 }
+
+.social {
+    min-width: 95px;
+    float: left;
+    width: 20%;
+    &__titulo {
+        text-align: center;
+        margin-bottom: 10px;
+        color: $colorBoton;
+        background: $colorBlanco;
+    }
+    &__lista__item {
+        background: $colorBlanco;
+    }
+    &__lista__link {
+        display: inline-block;
+        color:#fff;
+        background: #000;
+        padding: 5px 10px;
+        text-decoration: none;
+        -webkit-transition:all 500ms ease;
+        -o-transition:all 500ms ease;
+        transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
+        &:hover {
+            background: #000;
+            padding: 5px 20px;
+        }
+    }
+}
+.social--facebook {background:#3b5998;} 
+.social--twitter {background: #00abf0;}
+.social--instagram {background: #d95232;}
+.social--mail {background: #666666;}
+
