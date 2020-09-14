@@ -5,8 +5,14 @@
    background: $colorTarjeta;
    &__item {
       vertical-align: middle;
-      height: 140px;
-   }
+      height: 160px;
+      @include mayor(desktop) {
+         height: 140px;
+      }
+      @include mayor(mobile) {
+         height: 80px;
+      }
+}
    &__texto {
       background: $colorTarjeta;
       color: $colorBlanco;
@@ -32,4 +38,43 @@
 @keyframes fade {
    from {opacity: .4} 
    to {opacity: 1}
+}
+.subMenus  {
+   margin: 0;
+   padding: 0;
+   width: 16%;
+   position: fixed;
+   z-index: 1;
+   height: 0;
+   top: 25;
+   left: 20;
+   overflow: hidden;
+   transition: 0.5s;
+   // padding-top: 30px;   
+   &__item {
+      width: 80%;
+      margin: 0px 10px;
+      padding: 4px 4px 4px 4px;
+      text-decoration: none;
+      @include font-size(16px);
+      color: $colorBoton;
+      background: $colorBlanco;
+      display: block;
+      transition: 0.3s;
+      &:hover {
+         border: 1px solid $colorBorde;
+         border-radius: 4px;
+         background: $colorTarjeta;
+      }
+}
+   
+}
+.subMenus .subMenus__cerrar {
+   position: absolute;
+   top: 5px;
+   right: 5px;
+   font-size: 24px;
+   background: $colorTitulo;
+   color: $colorBlanco;
+   font-weight: bold;
 }

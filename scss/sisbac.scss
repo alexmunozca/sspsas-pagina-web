@@ -1,0 +1,60 @@
+@import "abstracs/mixins";
+@import "abstracs/variables";
+*,
+*::after,
+*::before {
+   margin: 0;
+   padding: 0;
+   box-sizing: inherit;
+}
+ul {
+   list-style: none;
+}
+a {
+   text-decoration: none;
+}
+
+.contenedor {
+   width: 80%;
+   margin: 10px auto;
+   background-color: #181617; 
+}
+.logo__imagen {
+   width: 10%;
+   height: auto;
+}
+.encabezado {
+   position: absolute;
+   top: 30px;
+   right: 120px;
+   &__lista__item {
+      display: block;
+      float: right;
+      padding: 2.5px 10px;
+      margin: 0px 5px;
+   }
+   &__lista__link {
+      @include font-size(18px);
+      color: #aba735;
+   }
+}
+.fondo{
+   position: relative;
+   display: flex;
+   &__imgen{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+//   opacity: 0.2;
+   }
+   &__informacion{
+      position: absolute;
+      top: 270px;
+      left: 30px;
+      color: #aba735;
+   }
+   &__titulo{
+      @include font-size(64px);
+      //      font-size: 3.5em;
+   }
+}

@@ -9,7 +9,19 @@
 
 .galeria__item {
   vertical-align: middle;
-  height: 140px;
+  height: 160px;
+}
+
+@media only screen and (max-width: 992px) {
+  .galeria__item {
+    height: 140px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .galeria__item {
+    height: 80px;
+  }
 }
 
 .galeria__texto {
@@ -48,6 +60,50 @@
   to {
     opacity: 1;
   }
+}
+
+.subMenus {
+  margin: 0;
+  padding: 0;
+  width: 16%;
+  position: fixed;
+  z-index: 1;
+  height: 0;
+  top: 25;
+  left: 20;
+  overflow: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.subMenus__item {
+  width: 80%;
+  margin: 0px 10px;
+  padding: 4px 4px 4px 4px;
+  text-decoration: none;
+  font-size: 16px;
+  font-size: 0.88889rem;
+  color: #3a4b53;
+  background: #FFFFFF;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.subMenus__item:hover {
+  border: 1px solid #3e3e3e;
+  border-radius: 4px;
+  background: #7D97A5;
+}
+
+.subMenus .subMenus__cerrar {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 24px;
+  background: #4D636F;
+  color: #FFFFFF;
+  font-weight: bold;
 }
 
 *,
@@ -188,19 +244,6 @@ body, span {
   height: 100vh;
 }
 
-.btn {
-  display: inline-block;
-  text-align: center;
-  margin-top: 20px;
-  border-radius: 5px;
-  padding: 12px 20px;
-}
-
-.btn__red {
-  background: #7D97A5;
-  color: #FFFFFF;
-}
-
 .encabezado {
   background: #4D636F;
   overflow: hidden;
@@ -213,7 +256,6 @@ body, span {
 }
 
 .encabezado__lista__item {
-  display: block;
   float: left;
   width: 80px;
   padding: 2.5px 10px;
@@ -235,6 +277,21 @@ body, span {
 
 .encabezado__lista__link {
   color: #3a4b53;
+}
+
+.encabezado__submenu {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: red;
+  width: 100%;
+  z-index: 1;
+}
+
+.encabezado__submenu__submenu__link {
+  float: left;
+  color: white;
+  text-decoration: none;
 }
 
 .encabezado__buscar {
@@ -424,6 +481,9 @@ body, span {
 }
 
 .navegador__lista__link {
+  display: block;
+  margin: 0px 10px;
+  padding: 4px 4px 4px 4px;
   font-size: 16px;
   font-size: 0.88889rem;
   color: #3a4b53;
@@ -761,8 +821,8 @@ body, span {
   color: #FFFFFF;
   font-size: 30px;
   font-weight: bold;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .brochure__modal__close:hover, .brochure__modal__close:focus {
@@ -831,6 +891,13 @@ body, span {
   width: 20%;
 }
 
+@media only screen and (max-width: 576px) {
+  .social {
+    font-size: 16px;
+    font-size: 0.88889rem;
+  }
+}
+
 .social__titulo {
   text-align: center;
   margin-bottom: 10px;
@@ -855,7 +922,7 @@ body, span {
 
 .social__lista__link:hover {
   background: #000;
-  padding: 5px 20px;
+  padding: 5px 15px;
 }
 
 .social--facebook {

@@ -9,8 +9,7 @@
             &:first-child {
                 margin: 0px 5px 0px 10px;
             }
-            display: block;
-            float: left;
+            float:left;
             width: 80px;
             padding: 2.5px 10px;
             margin: 0px 5px;
@@ -25,6 +24,22 @@
             color: $colorBoton;
         }
     }
+
+    &__submenu {
+        display: none;
+        position: absolute;
+        left: 0;
+        background-color: red;
+        width: 100%;
+        z-index: 1;
+
+        &__submenu__link {
+            float: left;
+            color: white;
+            text-decoration: none;
+        }
+    }
+
     &__buscar {
         @include mayor(tablet) {
             display: none;
@@ -135,7 +150,7 @@
     }
 }
 .navegador {
-    min-width: 95px;
+    min-width: 95px; 
     float: left;
     width: 20%;
     &__titulo {
@@ -161,6 +176,9 @@
         transition: background-color .15s ease-in-out;
     }
     &__lista__link {
+        display: block;
+        margin: 0px 10px;
+        padding: 4px 4px 4px 4px;
         @include font-size(16px);
         color: $colorBoton;
         background: $colorBlanco;
@@ -412,7 +430,7 @@
             color: $colorBlanco;
             font-size: 30px;
             font-weight: bold;
-            transition: 0.3s;
+            transition: 0.5s;
             &:hover,
             &:focus {
                 color: #bbb;
@@ -445,6 +463,9 @@
 
 .social {
     min-width: 95px;
+    @include mayor(mobile) {
+        @include font-size(16px);
+    }
     float: left;
     width: 20%;
     &__titulo {
@@ -467,7 +488,7 @@
         transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
         &:hover {
             background: #000;
-            padding: 5px 20px;
+            padding: 5px 15px;
         }
     }
 }

@@ -10,7 +10,7 @@
 	<META NAME="DESCRIPTION" CONTENT="Desarrollos de Software, Medicina IPS, Distritos de Riego, Basculas Camioneras, Dominios, Hosting">
 		<META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">	<title>Sistemas de Software Profesional SAS</title>
 	<link rel="stylesheet" href="css/main.css" type="text/css" />
-</head>
+	</head>
 
 <body class="contenedor">
 	<!-- inicio header -->
@@ -20,7 +20,7 @@
 				<a class="encabezado__lista__link" id="encabezadoInicio" href="#">Inicio</a> 
 			</li>
 			<li class="encabezado__lista__item">
-				<a class="encabezado__lista__link" href="#">Productos</a>
+				<a class="encabezado__lista__link openbtn" onclick="abrirSubmenu()" href="#">Productos</a>
 			</li>
 			<li class="encabezado__lista__item">
 				<a class="encabezado__lista__link" href="#">Servicios</a>
@@ -83,7 +83,7 @@
 		<section class="tarjeta" id="tarjetaSisbac">
 			<article class="tarjeta__titulo">SISBAC - Sistema Basculas Camioneras</article>
 			<div class="tarjeta__texto">
-				<img class="tarjeta__imagen imagen--borde" src="img/sisbac.jpg" alt="Sistema Basculas Camioneras" />
+				<img class="tarjeta__imagen imagen--borde" src="img/sisbac.png" alt="Sistema Basculas Camioneras" />
 				El objetivo fundamental de SISBAC es integrar los procesos que las
 				empresas realizan en el pesaje de entrada y salida de los vehículos de
 				carga, así poder llevar un seguimiento por medio de informes que
@@ -172,7 +172,7 @@
 			<div class="galeria__texto">Sistema Distritos</div>
 		</div>
 		<div class="galeria__list galeria--animacion">
-			<img class="galeria__item imagen--borde" src="img/sisbac.jpg" style="width:90%">
+			<img class="galeria__item imagen--borde" src="img/sisbac.png" style="width:90%">
 			<div class="galeria__texto">Sistema Basculas</div>
 		</div>
 		<div class="galeria__list galeria--animacion">
@@ -193,10 +193,10 @@
 				<a class="social__lista__link social--facebook" href="https://www.facebook.com/sspsas.desarrollo.1" target="_blank">Facebook</a>
 			</li>
 			<li class="social__lista__item">
-				<a class="social__lista__link social--twitter" href="http://www.twitter.com" target="_blank">Twitter</a>
+				<a class="social__lista__link social--twitter" href="http://www.twitter.com/ssp_sas" target="_blank">Twitter</a>
 			</li>
 			<li class="social__lista__item">
-				<a class="social__lista__link social--instagram" href="https://www.instagram.com/sspltda" target="_blank">Instagram</a>
+				<a class="social__lista__link social--instagram" href="https://www.instagram.com/ssp_sas" target="_blank">Instagram</a>
 			</li>
 			<li class="social__lista__item">
 				<a class="social__lista__link  social--mail" href="mailto:ventas@sspltda.com">Correo</a>
@@ -204,6 +204,17 @@
 		</ul>
 	</aside>
 	<!-- fin aside -->
+
+	<!-- inicio aside -->
+	<aside id="subMenus" class="subMenus">
+		<a class="subMenus__cerrar" href="javascript:void(0)" onclick="cerrarSubmenu()">&times;</a>
+		<a class="subMenus__item" id="primerSubmenu" href="#">Sistema de Distritos</a>
+		<a class="subMenus__item" href="http://www.sspltda.com/sisbac/index.html">Sistema de Basculas</a>
+		<a class="subMenus__item" href="#">Sistema de Medicina</a>
+		<a class="subMenus__item" href="#">Hosting & Dominios</a>
+	</aside>
+	<!-- fin aside -->
+
 	<div class="final"></div>
 
 	<!-- inicio footer -->
@@ -219,7 +230,8 @@
 	<!-- fin footer -->
 	 
 	<script src="js/index.js"></script>
-	<script src="js/galeria.js"></script>
+	<script src="js/grafica.js"></script>
 </body>
+
 
 </html>
