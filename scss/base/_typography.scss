@@ -16,21 +16,25 @@ body, span {
     }
 }
 
-.heading-primary {
-    font-weight: 400;
-    @include font-size(20px);
-    color: $colorBlanco;
+.letra-fondo {
+//    font-weight: 400;
 
-    @include mayor(tablet) {
-        @include font-size(30px);
-    }
-
-    @include mayor(desktop) {
+    @include menor(tablet) {
         @include font-size(40px);
+        top: 270px;
+        left: 30px;
     }
 
-    @include mayor(huge) {
+    @include menor(desktop) {
         @include font-size(50px);
+        top: 270px;
+        left: 30px;
+    }
+
+    @include menor(huge) {
+        @include font-size(64px);
+        top: 270px;
+        left: 30px;
     }
 }
 

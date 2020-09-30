@@ -12,17 +12,25 @@ $colorNegro: #000;
 $color-gray: #999999;
 
 // breakpoints
+$bp-pbase: 0px;
 $bp-mobile: 576px;
 $bp-tablet: 768px;
 $bp-desktop: 992px;
 $bp-huge: 1200px;
 
 $bps: (
+    "pbase": $bp-pbase,
     "mobile": $bp-mobile,
     "tablet": $bp-tablet,
     "desktop": $bp-desktop,
     "huge": $bp-huge,
 );
+
+// breakpoints
+$breakpoint-xs: 575px;
+$breakpoint-sm: 767px;
+$breakpoint-md: 1040px;
+$breakpoint-lg: 1360px;
 
 //font size rem
 $base-font-size: 18px;

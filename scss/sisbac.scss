@@ -1,5 +1,6 @@
 @import "abstracs/mixins";
 @import "abstracs/variables";
+
 *,
 *::after,
 *::before {
@@ -27,15 +28,124 @@ a {
    position: absolute;
    top: 30px;
    right: 120px;
-   &__lista__item {
-      display: block;
-      float: right;
-      padding: 2.5px 10px;
-      margin: 0px 5px;
+   &__lista {
+      @include pantalla(tablet) {
+         display: none;
+      }      
+      &__item {
+         display: block;
+         float: right;
+         padding: 2.5px 10px;
+         margin: 0px 5px;
+      }
+      &__link {
+         @include font-size(20px);
+         color: #aba735;
+      }
    }
-   &__lista__link {
-      @include font-size(18px);
-      color: #aba735;
+}
+.menu {
+   @include menor(tablet) {
+      display: none;
+   }
+   background: $colorTitulo;
+   &__hamburguesa {
+      @include menor(tablet) {
+         display: none;
+      }
+      line-height: 30px;
+      display: inline-block;
+
+
+      box-sizing: border-box;
+      user-select: none;
+      margin: 5px 5px;
+      font-weight: bold;
+      text-align: center;
+      width: 30px;
+      height: 30px;
+      border: 1px solid black;
+      border-radius: 5px;
+      &:hover {
+         background: $colorFondo;
+      }
+   }
+   &__input {
+      display: none;
+      &:checked ~ .menu__lista {
+         display: block;
+      }
+      &:checked ~ .menu__buscar {
+         display: inline-block;
+      }
+      &:checked ~ .menu__hamburguesa {
+         background: $colorFondo;
+      }
+         }
+   &__lista {
+      display: none;
+      &__item {
+         display: block;
+         background: $colorTitulo;
+         padding: 5px 10px;
+         border-bottom: 1px solid grey;
+         &:hover {
+            filter: brightness(125%);
+         }
+      }
+      &__link {
+         background: $colorTitulo;
+         color: $colorBlanco
+      }
+   }
+   &__buscar {
+      @include mayor(tablet) {
+         display: none;
+      }
+      background: $colorFondo;
+      width: 220px;
+      margin: 0px 10px;
+      border: 1px solid $colorBorde;
+      border-radius: 4px;
+      &__input {
+         @include font-size(16px);
+         border: 0;
+         background: $colorFondo;
+         padding: 5px 5px;
+         &:hover {
+            outline: none;
+            background: $colorFondo;
+         }
+         &:focus {
+            outline: none;
+            background: $colorFondo;
+         }
+         &:active {
+            outline: none;
+            background: $colorFondo;
+         }
+      }
+   }
+   &__subMenus {
+      display: none;
+      &__item {
+         background: $colorTitulo;
+         &:hover {
+            border: 1px solid $colorBorde;
+            border-radius: 4px;
+            background: $colorTarjeta;
+         }
+         &:hover .menu__subMenus__link {
+            background: $colorTarjeta;
+         }
+      }
+      &__link {
+         background: $colorTitulo;
+         color: $colorBlanco;
+         &:hover {
+            background: $colorTarjeta;
+         }
+      }
    }
 }
 .fondo{
@@ -49,12 +159,9 @@ a {
    }
    &__informacion{
       position: absolute;
-      top: 270px;
-      left: 30px;
       color: #aba735;
-   }
-   &__titulo{
-      @include font-size(64px);
-      //      font-size: 3.5em;
+      font-size: 3vw;
+      top: 22vw;
+      left: 2vw;
    }
 }

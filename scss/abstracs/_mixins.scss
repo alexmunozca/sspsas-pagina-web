@@ -17,9 +17,25 @@
 }
 
 @mixin menor($media) {
-  $min-width-bp: (map-get($bps, $media) or $media);
+  $min-width-bp: (map-get($bps, $media) or $media); 
 
   @media only screen and (min-width: $min-width-bp) {
     @content;
+  }
+}
+
+@mixin pantalla($media) {
+  @if $media == mobile {
+    @media only screen and (max-width: $breakpoint-xs) { @content; }
+  }
+  @else if $media == tablet {
+//    @media  only screen and (min-width: $breakpoint-xs) and (max-width: $breakpoint-sm) { @content; }
+    @media  only screen and (max-width: $breakpoint-sm) { @content; }
+  }
+  @else if $media == desktop {
+    @media  only screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) { @content; }
+  }
+  @else if $media == huge {
+    @media  only screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) { @content; }
   }
 }

@@ -3,7 +3,7 @@
     overflow: hidden;
     &__lista {
         @include mayor(tablet) {
-            display: none;
+            display: none; 
         }
         &__item {
             &:first-child {
@@ -145,6 +145,27 @@
             &:active {
                 outline: none;
                 background: $colorFondo;
+            }
+        }
+    }
+    &__subMenus {
+        display: none;
+        &__item {
+            background: $colorTitulo;
+            &:hover {
+                border: 1px solid $colorBorde;
+                border-radius: 4px;
+                background: $colorTarjeta;
+            }
+            &:hover .menu__subMenus__link {
+                background: $colorTarjeta;
+            }
+        }
+        &__link {
+            background: $colorTitulo;
+            color: $colorBlanco;
+            &:hover {
+                background: $colorTarjeta;
             }
         }
     }

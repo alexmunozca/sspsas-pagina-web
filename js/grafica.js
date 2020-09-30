@@ -35,3 +35,11 @@ function abrirSubmenu() {
 function cerrarSubmenu() {
    document.getElementById("subMenus").style.height = "0";
 }
+function abrirMenusubmenu() {
+   var prendido = document.querySelector("#menu__subMenus").style.display
+   if (prendido=="block"){
+       document.getElementById('menu__subMenus').style.display = 'none';
+   } else {
+       document.getElementById('menu__subMenus').style.display = 'block';
+   }
+}
