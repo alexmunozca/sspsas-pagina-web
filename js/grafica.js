@@ -21,6 +21,7 @@ for (i = 0; i < dots.length; i++) {
 }
 
 function abrirSubmenu() {
+   debugger;
    var ancho = document.querySelector("#subMenus").style.height
    if (ancho=="160px"){
       document.getElementById("primerSubmenu").style.marginTop = "0px";
@@ -28,8 +29,8 @@ function abrirSubmenu() {
       // document.getElementById('subMenus').style.display = 'none';
    } else {
       // document.getElementById('subMenus').style.display = 'block';
-      document.getElementById("primerSubmenu").style.marginTop = "30px";
       document.getElementById("subMenus").style.height = "160px";
+//      document.getElementById("primerSubmenu").style.margin = "30px";
    }
 }
 function cerrarSubmenu() {
@@ -38,8 +39,8 @@ function cerrarSubmenu() {
 function abrirMenusubmenu() {
    var prendido = document.querySelector("#menu__subMenus").style.display
    if (prendido=="block"){
-       document.getElementById('menu__subMenus').style.display = 'none';
+      document.getElementById('menu__subMenus').style.display = 'none';
    } else {
-       document.getElementById('menu__subMenus').style.display = 'block';
+      document.getElementById('menu__subMenus').style.display = 'block';
    }
 }
