@@ -13,7 +13,7 @@ function imagenActual(n) {
 function mostrarImagen(n) {
    var i;
    var slides = document.getElementsByClassName("exposicion__lista");
-   var dots = document.getElementsByClassName("puntos");
+   var dots = document.getElementsByClassName("puntos__lista");
    if (n > slides.length) {
       imagenIndex = 1
    }
@@ -24,8 +24,8 @@ function mostrarImagen(n) {
       slides[i].style.display = "none";
    }
    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
+      dots[i].className = dots[i].className.replace(" puntos__active", "");
    }
    slides[imagenIndex - 1].style.display = "block";
-   dots[imagenIndex - 1].className += " active";
+   dots[imagenIndex - 1].className += " puntos__active";
 }

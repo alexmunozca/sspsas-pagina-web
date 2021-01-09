@@ -21,7 +21,6 @@ for (i = 0; i < dots.length; i++) {
 }
 
 function abrirSubmenu() {
-   debugger;
    var ancho = document.querySelector("#subMenus").style.height
    if (ancho=="160px"){
       document.getElementById("primerSubmenu").style.marginTop = "0px";

@@ -46,7 +46,7 @@ function cargarContactenos (event) {
   //     document.getElementById('iframePrincipal').style.display = 'none';
   //   }
   // }
-  mostrarProductos("./html/contactenos.html", "650", "iframeContactenos")
+  mostrarProductos("./html/contactenos.html", "700", "iframeContactenos")
 }
 
 function mostrarProductos(eLink, eHeight, eClassname) {

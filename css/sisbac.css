@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::after,
 *::before {
@@ -21,6 +22,7 @@ a {
 }
 
 .logo__imagen {
+  cursor: pointer;
   width: 10%;
   height: auto;
 }
@@ -45,6 +47,9 @@ a {
   font-size: 20px;
   font-size: 1.1111111111rem;
   color: #aba735;
+}
+.encabezado__lista__link:hover {
+  filter: brightness(175%);
 }
 
 .menu {
@@ -181,31 +186,26 @@ a {
   margin: auto;
   text-align: center;
 }
-
 .exposicion__lista {
   display: none;
 }
-
 .exposicion__lista__imagen {
   height: 80%;
   width: 80%;
 }
-
 .exposicion__lista__texto {
   color: #f2f2f2;
   font-size: 15px;
   padding: 8px 12px;
   bottom: 8px;
 }
-
 .exposicion__lista__numero {
   color: #f2f2f2;
   font-size: 12px;
   padding: 8px 12px;
   top: 0;
 }
-
-.anterior, .siguiente {
+.exposicion__anterior, .exposicion__siguiente {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -219,23 +219,25 @@ a {
   border-radius: 0 3px 3px 0;
   user-select: none;
 }
-
-.anterior {
+.exposicion__anterior {
   left: 0;
   border-radius: 3px 0 0 3px;
 }
-
-.siguiente {
+.exposicion__anterior:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.exposicion__siguiente {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
-
-.anterior:hover,
-.siguiente:hover {
+.exposicion__siguiente:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-puntos {
+.puntos {
+  text-align: center;
+}
+.puntos__lista {
   cursor: pointer;
   height: 15px;
   width: 15px;
@@ -245,17 +247,16 @@ puntos {
   display: inline-block;
   transition: background-color 0.6s ease;
 }
-
-.active, .puntos:hover {
-  background-color: #717171;
+.puntos__active, .puntos__lista:hover {
+  background-color: #aba735;
 }
 
+/* tarjetas */
 .tarjetas {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
   grid-gap: 20px;
 }
-
 .tarjetas__contenido {
   display: grid;
   grid-template-rows: max-content 270px 1fr;
@@ -263,11 +264,79 @@ puntos {
   color: white;
   background-color: gray;
 }
-
 .tarjetas__imagen {
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+.piepagina__lista {
+  text-align: center;
+  color: white;
+  width: 33%;
+  float: left;
+}
+.piepagina__lista__item {
+  display: inline;
+}
+.piepagina__lista__link {
+  display: inline-block;
+  color: #fff;
+  margin: 10px;
+  padding: 15px 10px;
+  text-decoration: none;
+  -webkit-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+  /* Establecemos una transición a todas las propiedades */
+}
+
+.contactenos {
+  color: #FFFFFF;
+}
+.contactenos__input {
+  padding: 0px 0px;
+  font-size: 14px;
+  font-size: 0.7777777778rem;
+  padding: 5px;
+  width: 100px;
+  border: 1px solid #3e3e3e;
+  border-radius: 4px;
+  background: #aba735;
+  color: #FFFFFF;
+}
+.contactenos__input:hover {
+  filter: brightness(125%);
+}
+
+.texto--centrado {
+  text-align: center;
+}
+
+.social--facebook--inv:hover {
+  background: #3b5998;
+}
+
+.social--twitter--inv:hover {
+  background: #00abf0;
+}
+
+.social--instagram--inv:hover {
+  background: #d95232;
+}
+
+.social--whatsapp {
+  display: block;
+  width: 70px;
+  height: 70px;
+  color: #fff;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  border-radius: 50%;
+  line-height: 80px;
+  text-align: center;
+  z-index: 999;
 }
 
 /*# sourceMappingURL=sisbac.css.map */

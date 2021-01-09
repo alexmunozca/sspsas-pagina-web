@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> SISBAC CONTROL DE BASCULAS CAMIONERAS</title>
+	<link rel="stylesheet" href="../css/sisbac.css" type="text/css" />
+</head>
+<body class="contenedor">
+   <div class="logo">
+      <img class="logo__imagen" src="../img/logo_sspsas.png" alt="Logo Sistemas de Software Profesional SAS" />
+   </div>
+  	<header class="encabezado">
+		<ul class="encabezado__lista">
+			<li class="encabezado__lista__item">
+				<a class="encabezado__lista__link" href="#">Contactenos</a>
+			</li>
+			<li class="encabezado__lista__item">
+				<a class="encabezado__lista__link" href="./pantallas.html">Pantallas</a>
+			</li>
+			<li class="encabezado__lista__item">
+				<a class="encabezado__lista__link" href="./caracteristicas.html">Caracteristicas</a>
+			</li>
+			<li class="encabezado__lista__item">
+				<a class="encabezado__lista__link" id="encabezadoInicio" href="./index.html">Inicio</a> 
+			</li>
+		</ul>
+		<div class="menu">
+			<input class="menu__input" type="checkbox" id="menu" />
+			<label class="menu__hamburguesa" for="menu">☰</label>
+			<ul class="menu__lista">
+				<li class="menu__lista__item">
+					<a class="menu__lista__link" id="menuInicio" href="./index.html">Inicio</a>
+				</li>
+				<li class="menu__lista__item">
+					<a class="menu__lista__link" href="./caracteristicas.html">Caracteristicas</a>
+				</li>
+				<li class="menu__lista__item">
+					<a class="menu__lista__link" href="./pantallas.html">Pantallas</a>
+				</li>
+				<li class="menu__lista__item">
+					<a class="menu__lista__link" href="#">Contactenos</a>
+				</li>
+			</ul>
+		</div>
+   </header>
+	<hr>
+	<br>
+	<div class="contactenos texto--centrado">
+      <p>Móvil +57 311 257 99 45</p>
+      <p>E-mail: ventas@sspltda.com</p>
+      <p>Bogotá, Colombia</p>
+      <br>
+      <form action="mailto:ventas@sspltda.com.com" method="post" enctype="text/plain">
+         <label for="nombre">Nombre: </label>
+         <input type="text" name="nombre" size="25" maxlength="50">
+         <br>
+         <label for="apellidos">Apellidos: </label>
+         <input type="text" name="apellidos" size="35" maxlength="50">
+         <br>
+         <label for="correo">Correo electrónico: </label><input type="text" value="@" name="correo" size="40"
+            maxlength="100">
+         <br>
+         <br>
+         <label for="conocer">Cómo nos cononciste?</label><br>
+         <input type="checkbox" name="conocer">
+         A través de una empresa.<br>
+         <input type="checkbox" name="conocer">
+         A través de un buscador.<br>
+         <input type="checkbox" name="conocer">
+         Navegando por la red.<br>
+         <input type="checkbox" name="conocer">
+         Otros.
+         <br>
+         <br>
+         <label for="opinion">Sobre algun producto?</label><br>
+         <textarea cols="40" rows="5" name="opinion" placeholder="Escribe..."></textarea>
+         <br>
+         <label for="sugerencias">Alguna sugerencia...</label>
+         <br>
+         <textarea cols="40" rows="5" name="sugerencias" placeholder="Escribe tus sugerencias..."></textarea>
+         <br>
+         <input class="contactenos__input" type="submit" value="Enviar formulario">
+         <input class="contactenos__input" type="Reset" value="Borrar formulario">
+      </form>
+	</div>
+</body>
+</html>
