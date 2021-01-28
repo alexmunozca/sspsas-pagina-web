@@ -74,7 +74,7 @@
     }
     background: $colorTitulo;
     &__hamburguesa {
-        @include menor(tablet) {
+        @include menor(tablet) { 
             display: none;
         }
         box-sizing: border-box;
@@ -191,7 +191,7 @@
         padding: 0px 12px;
         @include mayor(mobile) {
             text-align: left;
-            padding: 0px 5px;
+            padding: 0px 0px;
         }
         background: $colorBlanco;
         transition: background-color .15s ease-in-out;
@@ -199,7 +199,7 @@
     &__lista__link {
         display: block;
         margin: 0px 10px;
-        padding: 4px 4px 4px 4px;
+        padding: 4px 4px 4px 0px;
         @include font-size(16px);
         color: $colorBoton;
         background: $colorBlanco;

@@ -18,8 +18,14 @@ a {
    width: 80%;
    margin: 10px auto;
    background-color: #181617; 
+   @include pantalla(tablet) {
+      width: 100%;
+   }      
 }
 .logo__imagen {
+   @include pantalla(tablet) {
+      display: none;
+   }      
    cursor: pointer;
    width: 10%;
    height: auto;
@@ -48,29 +54,28 @@ a {
    }
 }
 .menu {
+   text-align: center;
    @include menor(tablet) {
       display: none;
    }
-   background: $colorTitulo;
    &__hamburguesa {
       @include menor(tablet) {
          display: none;
       }
-      line-height: 30px;
-      display: inline-block;
-
-
+      background: $colorFondo;
       box-sizing: border-box;
-      user-select: none;
-      margin: 5px 5px;
-      font-weight: bold;
+      display: inline-block;
+      border: 1px solid black;
+      border-radius: 5px;
       text-align: center;
       width: 30px;
       height: 30px;
-      border: 1px solid black;
-      border-radius: 5px;
+      line-height: 30px;
+      font-weight: bold;
+      user-select: none;
+      margin: 5px 5px;
       &:hover {
-         background: $colorFondo;
+         background: $colorSisbac;
       }
    }
    &__input {
@@ -84,12 +89,12 @@ a {
       &:checked ~ .menu__hamburguesa {
          background: $colorFondo;
       }
-         }
+   }
    &__lista {
       display: none;
       &__item {
          display: block;
-         background: $colorTitulo;
+//         background: $colorTitulo;
          padding: 5px 10px;
          border-bottom: 1px solid grey;
          &:hover {
@@ -97,8 +102,11 @@ a {
          }
       }
       &__link {
-         background: $colorTitulo;
-         color: $colorBlanco
+         // background: $colorTitulo;
+         color: $colorBlanco;
+         &:hover {
+            color: $colorSisbac;
+         }
       }
    }
    &__buscar {

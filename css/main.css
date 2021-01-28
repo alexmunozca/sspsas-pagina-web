@@ -508,14 +508,14 @@ body, span {
 @media only screen and (max-width: 576px) {
   .navegador__lista__item {
     text-align: left;
-    padding: 0px 5px;
+    padding: 0px 0px;
   }
 }
 
 .navegador__lista__link {
   display: block;
   margin: 0px 10px;
-  padding: 4px 4px 4px 4px;
+  padding: 4px 4px 4px 0px;
   font-size: 16px;
   font-size: 0.88889rem;
   color: #3a4b53;
