@@ -14,7 +14,7 @@ function menuInicio() {
   location.reload()  
 }
 function cargarSisdis (event) {
-  mostrarProductos("./sisdis/sisdis.html", "3650", "iframeSisdis")
+  mostrarProductos("./sisdis/sisdis.html", "3800", "iframeSisdis")
 }
 function cargarSisbac (event) {
   mostrarProductos("./sisbac/sisbac.html", "3150", "iframeSisbac")
@@ -23,7 +23,7 @@ function cargarSismep (event) {
   mostrarProductos("./sismep/sismep.html", "2450", "iframeSismep")
 }
 function cargarHosting (event) {
-  mostrarProductos("./hosting/hosting.html" , "1650", "iframeNosotros")
+  mostrarProductos("./hosting/hosting.html" , "1800", "iframeHosting")
 }
 function cargarNosotros (event) {
 	varIframe = document.getElementById("iframePrincipal");	

@@ -56,7 +56,7 @@ a {
 .encabezado__lista__link {
   font-size: 20px;
   font-size: 1.1111111111rem;
-  color: #aba735;
+  color: #489221;
 }
 .encabezado__lista__link:hover {
   filter: brightness(175%);
@@ -90,7 +90,7 @@ a {
   }
 }
 .menu__hamburguesa:hover {
-  background: #aba735;
+  background: #489221;
 }
 .menu__input {
   display: none;
@@ -119,7 +119,7 @@ a {
   color: #FFFFFF;
 }
 .menu__lista__link:hover {
-  color: #aba735;
+  color: #489221;
 }
 .menu__buscar {
   background: #f6f8f8;
@@ -185,7 +185,7 @@ a {
 }
 .fondo__informacion {
   position: absolute;
-  color: #aba735;
+  color: #489221;
   font-size: 3vw;
   top: 22vw;
   left: 2vw;
@@ -260,7 +260,7 @@ a {
   transition: background-color 0.6s ease;
 }
 .puntos__active, .puntos__lista:hover {
-  background-color: #aba735;
+  background-color: #489221;
 }
 
 /* tarjetas */
@@ -314,7 +314,7 @@ a {
   width: 100px;
   border: 1px solid #3e3e3e;
   border-radius: 4px;
-  background: #aba735;
+  background: #489221;
   color: #FFFFFF;
 }
 .contactenos__input:hover {
@@ -360,4 +360,4 @@ a {
   z-index: 999;
 }
 
-/*# sourceMappingURL=sisbac.css.map */
+/*# sourceMappingURL=sisdis.css.map */
