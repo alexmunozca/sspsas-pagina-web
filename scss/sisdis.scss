@@ -286,7 +286,35 @@ a {
       transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
    }
 }
-
+.exhibicion {
+   position: relative;
+   text-align: center;
+   &__lista {
+      display: none;
+   }
+}
+.exhibicion__fila {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   &:after {
+      content: "";
+      display: table;
+      clear: both;
+   }
+}
+.exhibicion__columna {
+   float: left;
+   width: 16.66%;
+   &__imagen {
+      cursor: pointer;
+      opacity: 0.6;
+   }
+}
+.active,
+.exhibicion__columna__imagen:hover {
+   opacity: 1;
+}
 .contactenos {
    color: $colorBlanco;
    &__input {

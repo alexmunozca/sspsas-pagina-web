@@ -303,6 +303,39 @@ a {
   /* Establecemos una transición a todas las propiedades */
 }
 
+.exhibicion {
+  position: relative;
+  text-align: center;
+}
+.exhibicion__lista {
+  display: none;
+}
+
+.exhibicion__fila {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.exhibicion__fila:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.exhibicion__columna {
+  float: left;
+  width: 16.66%;
+}
+.exhibicion__columna__imagen {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.active,
+.exhibicion__columna__imagen:hover {
+  opacity: 1;
+}
+
 .contactenos {
   color: #FFFFFF;
 }
