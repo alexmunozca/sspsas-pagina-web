@@ -188,8 +188,8 @@ a {
    &__lista {
       display: none;
       &__imagen {
-         height: 80%; 
-         width: 80%; 
+         height: 75%; 
+         width: 75%; 
       }
       &__texto {
          color: #f2f2f2;
@@ -289,8 +289,13 @@ a {
 .exhibicion {
    position: relative;
    text-align: center;
+   margin: auto;
    &__lista {
       display: none;
+      &__imagen {
+         height: 75%; 
+         width: 75%; 
+      }
    }
 }
 .exhibicion__fila {
