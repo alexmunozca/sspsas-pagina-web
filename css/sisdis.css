@@ -230,8 +230,14 @@ a {
   position: absolute;
   color: #489221;
   font-size: 3vw;
-  top: 22vw;
   left: 2vw;
+  top: 20vw;
+}
+
+@media only screen and (max-width: 767px) {
+  .fondo__informacion {
+    top: 28vw;
+  }
 }
 
 /* Contenedor Imagenes */

@@ -175,8 +175,11 @@ a {
       position: absolute;
       color: $colorSisdis;
       font-size: 3vw;
-      top: 22vw;
       left: 2vw;
+      top: 20vw;
+      @include pantalla(tablet) {
+         top: 28vw;
+      }
    }
 }
 /* Contenedor Imagenes */
