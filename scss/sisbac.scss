@@ -286,6 +286,40 @@ a {
       transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
    }
 }
+.exhibicion {
+   position: relative;
+   text-align: center;
+   margin: auto;
+   &__lista {
+      display: none;
+      &__imagen {
+         height: 75%; 
+         width: 75%; 
+      }
+   }
+}
+.exhibicion__fila {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   &:after {
+      content: "";
+      display: table;
+      clear: both;
+   }
+}
+.exhibicion__columna {
+   float: left;
+   width: 16.66%;
+   &__imagen {
+      cursor: pointer;
+      opacity: 0.6;
+   }
+}
+.active,
+.exhibicion__columna__imagen:hover {
+   opacity: 1;
+}
 .contactenos {
    color: $colorBlanco;
    &__input {
