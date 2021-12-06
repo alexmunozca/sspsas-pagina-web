@@ -2,6 +2,7 @@ var botonInicio = document.getElementById('encabezadoInicio');
 var mnuInicio = document.getElementById('menuInicio');
 var botonSisdis = document.getElementById('botonSisdis');
 var botonSisbac = document.getElementById('botonSisbac');
+var botonSisbin = document.getElementById('botonSisbin');
 var botonSismep = document.getElementById('botonSismep');
 var botonHosting = document.getElementById('botonHosting');
 var botonNosotros = document.getElementById('botonNosotros');
@@ -18,6 +19,9 @@ function cargarSisdis (event) {
 }
 function cargarSisbac (event) {
   mostrarProductos("./sisbac/sisbac.html", "3150", "iframeSisbac")
+}
+function cargarSisbin (event) {
+  mostrarProductos("./sisbin/sisbin.html", "3150", "iframeSisbin")
 }
 function cargarSismep (event) {
   mostrarProductos("./sismep/sismep.html", "2450", "iframeSismep")
@@ -67,6 +71,7 @@ function mostrarProductos(eLink, eHeight, eClassname) {
 function ocultarProductos() {  
   document.getElementById('tarjetaSisdis').style.display = 'none';
   document.getElementById('tarjetaSisbac').style.display = 'none';
+  document.getElementById('tarjetaSisbin').style.display = 'none';
   document.getElementById('tarjetaSismep').style.display = 'none';
   document.getElementById('tarjetaHosting').style.display = 'none';
 }
@@ -76,6 +81,7 @@ botonInicio.addEventListener("click", encabezadoInicio, false);
 mnuInicio.addEventListener("click", menuInicio, false);
 botonSisdis.addEventListener("click", cargarSisdis, false);
 botonSisbac.addEventListener("click", cargarSisbac, false);
+botonSisbin.addEventListener("click", cargarSisbin, false);
 botonSismep.addEventListener("click", cargarSismep, false);
 botonHosting.addEventListener("click", cargarHosting, false);
 botonNosotros.addEventListener("click", cargarNosotros, false);
