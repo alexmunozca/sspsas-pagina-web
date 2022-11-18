@@ -7,6 +7,8 @@ var botonSismep = document.getElementById('botonSismep');
 var botonHosting = document.getElementById('botonHosting');
 var botonNosotros = document.getElementById('botonNosotros');
 var botonContactenos = document.getElementById('botonContactenos');
+var botonClientes = document.getElementById('botonClientes');
+var botonClientes1 = document.getElementById('botonClientes1');
 
 function encabezadoInicio() {  
   location.reload()  
@@ -53,6 +55,15 @@ function cargarContactenos (event) {
   mostrarProductos("./html/contactenos.html", "700", "iframeContactenos")
 }
 
+function cargarClientes (event) {
+	varIframe = document.getElementById("iframePrincipal");	
+	if (varIframe){
+		padre = varIframe.parentNode;
+		padre.removeChild(varIframe);
+  } 
+  mostrarProductos("./html/clientes.html", "1100", "iframeClientes")
+}
+
 function mostrarProductos(eLink, eHeight, eClassname) {
   ocultarProductos();
   var link = eLink 
@@ -86,3 +97,5 @@ botonSismep.addEventListener("click", cargarSismep, false);
 botonHosting.addEventListener("click", cargarHosting, false);
 botonNosotros.addEventListener("click", cargarNosotros, false);
 botonContactenos.addEventListener("click", cargarContactenos, false);
+botonClientes.addEventListener("click", cargarClientes, false);
+botonClientes1.addEventListener("click", cargarClientes, false);

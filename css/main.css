@@ -876,6 +876,48 @@ body, span {
   padding: 5px 15px;
 }
 
+.exhibicion {
+  position: relative;
+  text-align: center;
+  margin: auto;
+}
+
+.exhibicion__lista {
+  display: none;
+}
+
+.exhibicion__lista__imagen {
+  height: 75%;
+  width: 75%;
+}
+
+.exhibicion__fila {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.exhibicion__fila:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.exhibicion__columna {
+  float: left;
+  width: 16.66%;
+}
+
+.exhibicion__columna__imagen {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.active,
+.exhibicion__columna__imagen:hover {
+  opacity: 1;
+}
+
 .social--facebook {
   background: #3b5998;
 }
