@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> SISBAC CONTROL DE BASCULAS CAMIONERAS</title>
+	<link rel="stylesheet" href="../css/sisbac.css" type="text/css" />
+</head>
+<body class="contenedor">
+   <div class="logo">
+		<a href="../index.html">
+			<img class="logo__imagen" src="../img/logo_sspsas.png" alt="Logo Sistemas de Software Profesional SAS" />
+		</a>
+   </div>
+  	<header class="encabezado">
+		<ul class="encabezado__lista">
+			<li class="encabezado__lista__item">
+				<a class="encabezado__lista__link" href="./contactenos.html">Contactenos</a>
+			</li>
+			<li class="encabezado__lista__item">
+				<a class="encabezado__lista__link" href="./presentacion.html">Presentación</a>
+			</li>
+			<li class="encabezado__lista__item">
+				<a class="encabezado__lista__link" href="./clientes.html">Clientes</a>
+			</li>
+			<li class="encabezado__lista__item">
+				<a class="encabezado__lista__link" href="#">Pantallas</a>
+			</li>
+			<li class="encabezado__lista__item">
+				<a class="encabezado__lista__link" href="./caracteristicas.html">Caracteristicas</a>
+			</li>
+			<li class="encabezado__lista__item">
+				<a class="encabezado__lista__link" id="encabezadoInicio" href="./index.html">Inicio</a> 
+			</li>
+		</ul>
+   </header>
+	<div class="menu">
+		<input class="menu__input" type="checkbox" id="menu" />
+		<label class="menu__hamburguesa" for="menu">☰</label>
+		<ul class="menu__lista">
+			<li class="menu__lista__item">
+				<a class="menu__lista__link" id="menuInicio" href="./index.html">Inicio</a>
+			</li>
+			<li class="menu__lista__item">
+				<a class="menu__lista__link" href="./caracteristicas.html">Caracteristicas</a>
+			</li>
+			<li class="menu__lista__item">
+				<a class="menu__lista__link" href="#">Pantallas</a>
+			</li>
+			<li class="menu__lista__item">
+				<a class="menu__lista__link" href="./clientes.html">Clientes</a>
+			</li>
+			<li class="menu__lista__item">
+				<a class="menu__lista__link" href="./presentacion.html">Presentación</a>
+			</li>
+			<li class="menu__lista__item">
+				<a class="menu__lista__link" href="./contactenos.html">Contactenos</a>
+			</li>
+		</ul>
+	</div>
+<hr>
+	<div class="exposicion">
+		<div class="exposicion__lista">
+			<div class="exposicion__lista__numero">1 / 11</div>
+			<img class="exposicion__lista__imagen" src="./sisbacMenu.jpg">
+			<div class="exposicion__lista__texto">Pantalla Principal</div>
+		</div>
+		<div class="exposicion__lista">
+			<div class="exposicion__lista__numero">2 / 11</div>
+			<img class="exposicion__lista__imagen" src="./maestroBasculas.jpg">
+			<div class="exposicion__lista__texto">Maestro Basculas</div>
+		</div>
+		<div class="exposicion__lista">
+			<div class="exposicion__lista__numero">3 / 11</div>
+			<img class="exposicion__lista__imagen" src="./maestroVehiculos.jpg">
+			<div class="exposicion__lista__texto">Maestro Vehiculos</div>
+		</div>
+		<div class="exposicion__lista">
+			<div class="exposicion__lista__numero">4 / 11</div>
+			<img class="exposicion__lista__imagen" src="./salidaVehiculos.jpg">
+			<div class="exposicion__lista__texto">Salida Vehiculos</div>
+		</div>
+		<div class="exposicion__lista">
+			<div class="exposicion__lista__numero">5 / 11</div>
+			<img class="exposicion__lista__imagen" src="./pesajeVehiculos.jpg">
+			<div class="exposicion__lista__texto">Pesaje Vehiculos</div>
+		</div>
+		<div class="exposicion__lista">
+			<div class="exposicion__lista__numero">6 / 11</div>
+			<img class="exposicion__lista__imagen" src="./consultaMovimientos.jpg">
+			<div class="exposicion__lista__texto">Consulta Movimientos</div>
+		</div>
+		<div class="exposicion__lista">
+			<div class="exposicion__lista__numero">7 / 11</div>
+			<img class="exposicion__lista__imagen" src="./consultaVehiculos.jpg">
+			<div class="exposicion__lista__texto">Consulta Vehiculos</div>
+		</div>
+		<div class="exposicion__lista">
+			<div class="exposicion__lista__numero">8 / 11</div>
+			<img class="exposicion__lista__imagen" src="./impresionComprobantes.jpg">
+			<div class="exposicion__lista__texto">Impresión Comprobantes</div>
+		</div>
+		<div class="exposicion__lista">
+			<div class="exposicion__lista__numero">9 / 11</div>
+			<img class="exposicion__lista__imagen" src="./maestroTipovehiculos.jpg">
+			<div class="exposicion__lista__texto">Maestro Tipo Vehiculos</div>
+		</div>
+		<div class="exposicion__lista">
+			<div class="exposicion__lista__numero">10 / 11</div>
+			<img class="exposicion__lista__imagen" src="./maestroUsuarios.jpg">
+			<div class="exposicion__lista__texto">Maestro Usuarios</div>
+		</div>
+		<div class="exposicion__lista">
+			<div class="exposicion__lista__numero">11 / 11</div>
+			<img class="exposicion__lista__imagen" src="./consultaAuditoria.jpg">
+			<div class="exposicion__lista__texto">Consulta Auditoria</div>
+		</div>
+		<a class="exposicion__anterior" onclick="controlImagen(-1)">&#10094;</a>
+		<a class="exposicion__siguiente" onclick="controlImagen(1)">&#10095;</a>
+	</div>
+	<br>
+	<div class="puntos">
+		<span class="puntos__lista" onclick="imagenActual(1)"></span>
+		<span class="puntos__lista" onclick="imagenActual(2)"></span>
+		<span class="puntos__lista" onclick="imagenActual(3)"></span>
+		<span class="puntos__lista" onclick="imagenActual(4)"></span>
+		<span class="puntos__lista" onclick="imagenActual(5)"></span>
+		<span class="puntos__lista" onclick="imagenActual(6)"></span>
+		<span class="puntos__lista" onclick="imagenActual(7)"></span>
+		<span class="puntos__lista" onclick="imagenActual(8)"></span>
+		<span class="puntos__lista" onclick="imagenActual(9)"></span>
+		<span class="puntos__lista" onclick="imagenActual(10)"></span>
+		<span class="puntos__lista" onclick="imagenActual(11)"></span>
+	</div>	
+	<script src="../js/imagenes.js"></script>
+</body>
+</html>

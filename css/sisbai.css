@@ -61,7 +61,7 @@ a {
 .encabezado__lista__link {
   font-size: 20px;
   font-size: 1.11111rem;
-  color: #ececec;
+  color: #f6f8f8;
 }
 
 .encabezado__lista__link:hover {
@@ -100,7 +100,7 @@ a {
 }
 
 .menu__hamburguesa:hover {
-  background: #aba735;
+  background: #f6f8f8;
 }
 
 .menu__input {
@@ -138,7 +138,7 @@ a {
 }
 
 .menu__lista__link:hover {
-  color: #aba735;
+  color: #f6f8f8;
 }
 
 .menu__buscar {
@@ -218,7 +218,7 @@ a {
 
 .fondo__informacion {
   position: absolute;
-  color: #aba735;
+  color: #f6f8f8;
   font-size: 3vw;
   top: 22vw;
   left: 2vw;
@@ -304,7 +304,7 @@ a {
 }
 
 .puntos__active, .puntos__lista:hover {
-  background-color: #aba735;
+  background-color: #f6f8f8;
 }
 
 /* tarjetas */
@@ -403,7 +403,7 @@ a {
   width: 100px;
   border: 1px solid #3e3e3e;
   border-radius: 4px;
-  background: #aba735;
+  background: #f6f8f8;
   color: #FFFFFF;
 }
 

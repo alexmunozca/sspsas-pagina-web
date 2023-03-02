@@ -30,6 +30,7 @@
 			</li>
 			<li class="encabezado__lista__item">
 				<a class="encabezado__lista__link openbtn" onclick="abrirSubmenu()" href="#">Productos</a>
+				<!-- <a class="encabezado__lista__link openbtn" href="javascript:abrirSubmenu()" onclick="cerrarSubmenu()" >Productos</a> -->
 			</li>
 			<li class="encabezado__lista__item">
 				<a class="encabezado__lista__link" href="#">Servicios</a>
@@ -52,19 +53,19 @@
 					<a class="menu__lista__link"  onclick="abrirMenusubmenu()" href="#">Productos</a>
 					<ul class="menu__subMenus" id="menu__subMenus">
 						<li class="menu__subMenus__item">
-							<a class="menu__subMenus__link" id="primerSubmenu" href="sisdis/index.html">Sistema de Distritos de Riego</a>
+							<a class="menu__subMenus__link" id="primerSubmenu" href="javascript:cargarSisdis()">Sistema de Distritos de Riego</a>
 						</li>
 						<li class="menu__subMenus__item">
-							<a class="menu__subMenus__link" href="sisbac/index.html">Sistema de Basculas Camioneras</a>
+							<a class="menu__subMenus__link" href="javascript:cargarSisbac()">Sistema de Basculas Camioneras</a>
 						</li>
 						<li class="menu__subMenus__item">
-							<a class="menu__subMenus__link" href="#">Sistema de Basculas Industriales</a>
+							<a class="menu__subMenus__link" href="javascript:cargarSisbai()">Sistema de Basculas Industriales</a>
 						</li>
 						<li class="menu__subMenus__item">
-							<a class="menu__subMenus__link" href="#">Sistema de Medicina</a>
+							<a class="menu__subMenus__link" href="javascript:cargarSismep()">Sistema de Medicina</a>
 						</li>
 						<li class="menu__subMenus__item">
-							<a class="menu__subMenus__link" href="#">Hosting & Dominios</a>
+							<a class="menu__subMenus__link" href="javascript:cargarHosting()">Hosting & Dominios</a>
 						</li>
 					</ul>
 				</li>
@@ -144,14 +145,14 @@
 					<span class="tarjeta__boton__texto" id="botonSismep">Leer mas..</span>
 				</a>
 			</article>
-			<article class="tarjeta__contenido" id="tarjetaSisbin">
-				<header class="tarjeta__titulo">SISBIN - Sistema Basculas Industriales</header>
+			<article class="tarjeta__contenido" id="tarjetaSisbai">
+				<header class="tarjeta__titulo">SISBAI - Sistema Basculas Industriales</header>
 				<div class="tarjeta__texto">
-					<img class="tarjeta__imagen imagen--borde" src="img/sisbin.jpg" alt="Sistema Basculas Industriales" />
+					<img class="tarjeta__imagen imagen--borde" src="img/sisbai.jpg" alt="Sistema Basculas Industriales" />
 					Es un sistema para el registro y seguimiento de basculas industriales, que integra los procesos dentro de operaciones, realizando registros en la entrada y salida de los productos, cuentas con módulos estructurados que permiten niveles de control óptimos en ingresos de usuarios, seguridad y trazabilidad, su nivel de integración hace de esta herramienta el mejor aliado en las operaciones diarias.
 				</div>
-				<a href="#" class="tarjeta__boton" role="button" id="sisbin">
-					<span class="tarjeta__boton__texto" id="botonSisbin">Leer mas..</span>
+				<a href="#" class="tarjeta__boton" role="button" id="sisbai">
+					<span class="tarjeta__boton__texto" id="botonSisbai">Leer mas..</span>
 				</a>
 			</article>
 			<article class="tarjeta__contenido" id="tarjetaHosting">
@@ -221,7 +222,7 @@
 			<div class="galeria__texto">Sistema Medicina</div>
 		</div>
 		<div class="galeria__list galeria--animacion">
-			<img class="galeria__item imagen--borde" src="img/sisbin.jpg" style="width:90%">
+			<img class="galeria__item imagen--borde" src="img/sisbai.jpg" style="width:90%">
 			<div class="galeria__texto">Sistema Basculas Industriales</div>
 		</div>
 		<div class="galeria__list galeria--animacion">
@@ -254,11 +255,11 @@
 	<aside id="subMenus" class="subMenus">
 		<a class="subMenus__cerrar" href="javascript:void(0)" onclick="cerrarSubmenu()">&times;</a>
 		<br>
-		<a class="subMenus__item" id="primerSubmenu" href="sisdis/index.html">Sistema de Distritos de Riego</a>
-		<a class="subMenus__item" href="sisbac/index.html">Sistema de Basculas Camioneras</a>
-		<a class="subMenus__item" href="#">Sistema de Basculas Industriales</a>
-		<a class="subMenus__item" href="#">Sistema de Medicina</a>
-		<a class="subMenus__item" href="#">Hosting & Dominios</a>
+		<a class="subMenus__item" id="primerSubmenu" href="javascript:cargarSisdis()" onclick="cerrarSubmenu()">Sistema de Distritos de Riego</a>
+		<a class="subMenus__item" href="javascript:cargarSisbac()" onclick="cerrarSubmenu()">Sistema de Basculas Camioneras</a>
+		<a class="subMenus__item" href="javascript:cargarSisbai()" onclick="cerrarSubmenu()">Sistema de Basculas Industriales</a>
+		<a class="subMenus__item" href="javascript:cargarSismep()" onclick="cerrarSubmenu()">Sistema de Medicina</a>
+		<a class="subMenus__item" href="javascript:cargarHosting()" onclick="cerrarSubmenu()">Hosting & Dominios</a>
 	</aside>
 	<!-- fin aside -->
 
